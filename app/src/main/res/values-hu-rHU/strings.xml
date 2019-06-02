@@ -304,7 +304,7 @@ Használd örömmel az AmazMod-ot! ♡\"</string>
     <string name="error">Hiba</string>
     <string name="invalid_url">Érvénytelen iCal URL!</string>
     <string name="file_or_connection_error">Fájl vagy csatl. hiba, a fájlt nem lehet megnyitni!</string>
-    <string name="update_process_warning">FIGYELMEZTETÉS: a frissítés 15 percig is eltarthat, az óra felület egy/több alkalommal újraindul. Ne használd az órát a folyamat során, mert az megszakadhat. Csak akkor kezd el a frissítést, ha várhatóan be is tudod fejezni.</string>
+    <string name="update_process_warning">FIGYELMEZTETÉS: a frissítési folyamat során ébren kell tartani a képernyőt, a telepítés kb. 3 percet vesz igénybe. A rendszer egy vagy több alkalommal újraindul. Ne használd az órát a folyamat során, mert a művelet megszakadhat. Csak akkor kezd el a frissítést, ha meg is tudod várni amíg befejeződik.</string>
     <string name="search_title">Keresés</string>
     <string name="pref_use_notification_scheduler">Tárolja az értesítéseket szétkapcsolódáskor</string>
     <string name="pref_use_notification_scheduler_summary">Tárolja a kapott értesítéseket az óra és a telefon szétkapcsolódása esetén és a kapcsolat visszaállításakor küldje el őket</string>
@@ -328,4 +328,12 @@ Használd örömmel az AmazMod-ot! ♡\"</string>
     <string name="notification_low_battery_description">Akkumulátor töltöttsége %s alá csökkent</string>
     <string name="notification_watch_charged">Akku teljesen feltöltve</string>
     <string name="notification_watch_charged_description">Az óra teljesen feltöltve! Most már leveheti a töltőről.</string>
+    <string name="statsandlogs">Stat. / Naplók</string>
+    <string name="clear_log">Napló törlése</string>
+    <string name="send_log">Napló küldése</string>
+    <string name="battery_optimization_warning">Az AmazMod akku optimizálás alatt áll. Javasoljuk eltávolítását onnan, így semmilyen értesítés nem vész el.</string>
+    <string name="remove">ELTÁVOLÍT</string>
+    <string name="grant">MEGAD</string>
+    <string name="no_storage_permission">Az AmazModnak nincs tárhely engedélye, add ezt meg.</string>
+    <string name="activity_about_recruiter">Toborzó / Újonc</string>
 </resources>

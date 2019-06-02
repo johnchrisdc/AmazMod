@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +14,14 @@ import com.edotassi.amazmod.db.model.NotificationEntity;
 import com.edotassi.amazmod.db.model.NotificationEntity_Table;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
+import org.tinylog.Logger;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.concurrent.Callable;
 
 import amazmod.com.transport.Constants;
@@ -36,6 +45,8 @@ public class StatsActivity extends BaseAppCompatActivity {
     TextView notificationsLast24Hours;
     @BindView(R.id.activity_stats_notifications_total)
     TextView notificationsTotal;
+    @BindView(R.id.activity_stats_logs_content)
+    TextView logsContentEditText;
 
     @BindView(R.id.activity_stats_open_notifications_log)
     Button openNotificationsLogButton;
@@ -72,12 +83,63 @@ public class StatsActivity extends BaseAppCompatActivity {
         super.onResume();
 
         loadStats();
+        loadLogs();
     }
 
     @SuppressLint("CheckResult")
     @OnClick(R.id.activity_stats_open_notifications_log)
     public void openLog() {
         startActivity(new Intent(this, NotificationsLogActivity.class));
+    }
+
+
+    @OnClick(R.id.activity_stats_clear_logs)
+    public void clearLogs(){
+        try{
+            logsContentEditText.setText("");
+            FileWriter fw = new FileWriter(Constants.LOGFILE,false);
+        }catch (IOException e){
+            Logger.error(e,"clearLogs: can't empty file " + Constants.LOGFILE);
+        }
+
+    }
+
+    @OnClick(R.id.activity_stats_send_logs)
+    public void sendLogs(){
+        /*
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        Uri uri = Uri.fromFile(new File(Constants.LOGFILE));
+        shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
+        startActivity(Intent.createChooser(shareIntent, "Share Log"));*/
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "AmazMod Phone Logs");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, logsContentEditText.getText());
+        startActivity(Intent.createChooser(sharingIntent, getString(R.string.send_log)));
+    }
+
+    private void loadLogs(){
+        try {
+            // How to read file into String before Java 7
+            InputStream is = new FileInputStream(Constants.LOGFILE);
+            BufferedReader buf = new BufferedReader(new InputStreamReader(is));
+
+            String line = buf.readLine();
+            StringBuilder sb = new StringBuilder();
+
+            while (line != null) {
+                sb.append(line).append("\n");
+                line = buf.readLine();
+            }
+
+            String fileAsString = sb.toString();
+            logsContentEditText.setText(fileAsString);
+            logsContentEditText.setMovementMethod(new ScrollingMovementMethod());
+        } catch (IOException e){
+            Logger.error(e, "loadLogs: Cant read file " + Constants.LOGFILE);
+        }
+
     }
 
     @SuppressLint("CheckResult")

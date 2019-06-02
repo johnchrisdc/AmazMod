@@ -302,7 +302,7 @@
     <string name="error">Ошибка</string>
     <string name="invalid_url">Недопустимый URL-адрес iCal!</string>
     <string name="file_or_connection_error">Ошибка файла или соединения, файл не может быть открыт!</string>
-    <string name="update_process_warning">ВНИМАНИЕ: процесс обновления может занять до 15 минут, и часы будут перезагружаться один или несколько раз. Не используйте часы во время этого процесса иначе они могут быть повреждены. Начните обновление только если вы можете дождаться его завершения.</string>
+    <string name="update_process_warning">ВНИМАНИЕ: процесс обновления требует включенного экрана для выполнения установки и может занять порядка 3 минут, в течение которых часы перезагрузятся один или несколько раз. Не используйте часы во время этого процесса, иначе они могут выйти из строя. Начинайте обновление только в том случае, если вы можете дождаться его завершения.</string>
     <string name="search_title">Поиск</string>
     <string name="pref_use_notification_scheduler">Хранить уведомления при отключении</string>
     <string name="pref_use_notification_scheduler_summary">Хранить уведомления, полученные когда часы не на связи, и отправить их, когда соединение восстановлено</string>
@@ -326,4 +326,12 @@
     <string name="notification_low_battery_description">Заряд батареи часов ниже %s</string>
     <string name="notification_watch_charged">Батарея полностью заряжена</string>
     <string name="notification_watch_charged_description">Часы полностью заряжены! Можно отсоединить зарядку.</string>
+    <string name="statsandlogs">Статистика / Логи</string>
+    <string name="clear_log">Очистить логи</string>
+    <string name="send_log">Отправить логи</string>
+    <string name="battery_optimization_warning">AmazMod находится в процессе оптимизации батареи. Мы рекомендуем удалить его, уведомления будут потеряны.</string>
+    <string name="remove">УДАЛИТЬ</string>
+    <string name="grant">РАЗРЕШИТЬ</string>
+    <string name="no_storage_permission">AmazMod не имеет разрешения на доступ к файлам, пожалуйста, предоставьте его.</string>
+    <string name="activity_about_recruiter">Подбор персонала</string>
 </resources>

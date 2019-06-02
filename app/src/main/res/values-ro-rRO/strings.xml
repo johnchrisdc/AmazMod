@@ -49,7 +49,7 @@
     <string name="customui_test">Interfață personalizată</string>
     <string name="standard_test">Interfața standard</string>
     <string name="battery_chart_title">Baterie diagramă</string>
-    <string name="heartrate_chart_title">Heart-rate chart</string>
+    <string name="heartrate_chart_title">Diagrama despre bătăile inimi</string>
     <string name="watch_info">Informațiile ceasului</string>
     <string name="last_charge">Since full charge</string>
     <string name="last_charge_no_info">Aşteptare pentru încărcare completă</string>
@@ -71,7 +71,7 @@
     <string name="support_email">Email de suport</string>
     <string name="project_github">Proiect pe Github</string>
     <string name="activity_about_project_maintainer">Responsabil de proiect</string>
-    <string name="activity_about_devs">Devs</string>
+    <string name="activity_about_devs">Developers</string>
     <string name="activity_about_testers">Laboranți</string>
     <string name="translators">Traducători</string>
     <string name="activity_watchface_need_greatfit">Trebuie să aveţi watchface GreatFit sau widget-uri Calendar/Cronologie instalate pe ceas pentru aceste opţiuni să fie utilizate</string>
@@ -302,7 +302,7 @@
     <string name="error">Eroare</string>
     <string name="invalid_url">URL iCal invalid!</string>
     <string name="file_or_connection_error">Eroare fișierul sau conexiunea, fișierul nu poate fii deschisă!</string>
-    <string name="update_process_warning">Avertisment: procesul de actualizare poate dura până la 15 minute și interfața ceasului va fi repornit una sau mai multe ori. Nu utilizaţi ceasul în timpul procesului sau lucrurile poate sa se strice. Pornește actualizarea numai în cazul în care puteţi să aşteptaţi pentru a se termina.</string>
+    <string name="update_process_warning">WARNING: the update process need to keep the screen on to make installation take only about 3 minutes and watch interface will be restarted one or more times. Don\'t use the watch during the process or things can be broken. Start update only if you can wait for it to finish.</string>
     <string name="search_title">Caută</string>
     <string name="pref_use_notification_scheduler">Depozitează notificațiile când este deconectat</string>
     <string name="pref_use_notification_scheduler_summary">Depozitează notificărilor primite în timp ce ceasul si mobilul sunt deconectate și trimite-le atunci când se restabilește conexiunea</string>
@@ -326,4 +326,12 @@
     <string name="notification_low_battery_description">Watch\'s battery dropped below %s</string>
     <string name="notification_watch_charged">Amazfit is fully charged</string>
     <string name="notification_watch_charged_description">Watch is fully charged! You can now unplug it from the charging dock.</string>
+    <string name="statsandlogs">Stats / Logs</string>
+    <string name="clear_log">Clear Log</string>
+    <string name="send_log">Send Log</string>
+    <string name="battery_optimization_warning">AmazMod is under battery optimization. We recomend removing it from there so no notifications are lost.</string>
+    <string name="remove">REMOVE</string>
+    <string name="grant">GRANT</string>
+    <string name="no_storage_permission">AmazMod has no Storage Permission, please grant it.</string>
+    <string name="activity_about_recruiter">Recruiter / Engager</string>
 </resources>

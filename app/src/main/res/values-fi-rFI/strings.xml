@@ -71,7 +71,7 @@
     <string name="support_email">Tuki sähköpostilla</string>
     <string name="project_github">Projekti GitHubissa</string>
     <string name="activity_about_project_maintainer">Projektin ylläpitäjä</string>
-    <string name="activity_about_devs">Kehittäjä</string>
+    <string name="activity_about_devs">Developers</string>
     <string name="activity_about_testers">Testaajat</string>
     <string name="translators">Kääntäjät</string>
     <string name="activity_watchface_need_greatfit">Sinulla täytyy olla GreatFit kellotaulu tai Calendar/Timeline widgetti asennettuna, jotta voisit muuttaa näitä asetuksia</string>
@@ -302,7 +302,7 @@
     <string name="error">Virhe</string>
     <string name="invalid_url">Virheellinen iCal URL!</string>
     <string name="file_or_connection_error">Tiedosto- tai yhteysvirhe, tiedostoa ei voitu avata!</string>
-    <string name="update_process_warning">Varoitus: päivitys voi kestää jopa 15 minuuttia ja kello uudelleenkäynnistyy yhden tai useamman kerran. Älä käytä kelloa päivityksen aikana tai tiedostoja voi vaurioitua. Aloita päivitys vain, jos voit odottaa sen valmistumista.</string>
+    <string name="update_process_warning">WARNING: the update process need to keep the screen on to make installation take only about 3 minutes and watch interface will be restarted one or more times. Don\'t use the watch during the process or things can be broken. Start update only if you can wait for it to finish.</string>
     <string name="search_title">Etsi</string>
     <string name="pref_use_notification_scheduler">Tallenna ilmoitukset kun yhteys on katkennut</string>
     <string name="pref_use_notification_scheduler_summary">Tallenta ilmoitukset kun kellon ja puhelimen yhteys on katkennut ja lähetä ne kun yhteys palautuu</string>
@@ -326,4 +326,12 @@
     <string name="notification_low_battery_description">Kellon akun varaus on laskenut alle %s</string>
     <string name="notification_watch_charged">Amazfit on ladattu täyteen</string>
     <string name="notification_watch_charged_description">Kello on ladattu täyteen! Voit nyt poistaa sen laturista.</string>
+    <string name="statsandlogs">Tilasto / Loki</string>
+    <string name="clear_log">Clear Log</string>
+    <string name="send_log">Send Log</string>
+    <string name="battery_optimization_warning">AmazMod is under battery optimization. We recomend removing it from there so no notifications are lost.</string>
+    <string name="remove">REMOVE</string>
+    <string name="grant">GRANT</string>
+    <string name="no_storage_permission">AmazMod has no Storage Permission, please grant it.</string>
+    <string name="activity_about_recruiter">Recruiter / Engager</string>
 </resources>

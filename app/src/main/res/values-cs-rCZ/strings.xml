@@ -304,7 +304,7 @@ Vychutnejte si používání AmazModu! ♡\"</string>
     <string name="error">Chyba</string>
     <string name="invalid_url">Invalid URL</string>
     <string name="file_or_connection_error">File or connection error, could not open file!</string>
-    <string name="update_process_warning">VAROVÁNÍ: proces aktualizace může trvat až 15 minut a uživatelské rozhraní hodinek bude jednou nebo vícekrát restartováno. Během procesu hodinky nepožívejte jinak může dojít k přerušení procesu aktualizace. Spusťte aktualizaci pouze v případě, že můžete na celý proces počkat až do konce.</string>
+    <string name="update_process_warning">VAROVÁNÍ: proces aktualizace potřebuje nechat obrazovku zapnutou proto, aby instalace trvala pouze 3 minuty, rozhraní hodinek bude jednou nebo vícekrát restartováno. Nepoužívejte hodinky během procesu aktualizace, neboť se může něco pokazit. Aktualizaci spusťte pouze v případě, pakliže máte čas počkat na její dokončení.</string>
     <string name="search_title">Hledat</string>
     <string name="pref_use_notification_scheduler">Ukládat oznámení i po odpojení</string>
     <string name="pref_use_notification_scheduler_summary">Když budou hodinky od telefonu odpojeny, uloží přijatá oznámení a odešle je do hodinek při obnovení spojení</string>
@@ -328,4 +328,12 @@ Vychutnejte si používání AmazModu! ♡\"</string>
     <string name="notification_low_battery_description">Baterie hodinek je nižší než %s</string>
     <string name="notification_watch_charged">Amazfit je plně nabitý</string>
     <string name="notification_watch_charged_description">Hodinky jsou plně nabité! Můžete je odpojit z nabíjecího doku.</string>
+    <string name="statsandlogs">Statistiky / Protokoly</string>
+    <string name="clear_log">Vymazat protokol</string>
+    <string name="send_log">Odeslat protokol</string>
+    <string name="battery_optimization_warning">AmazMod je zahrnut do režimu optimalizace baterie. Doporučujeme jej odtamtud odebrat, aby nedocházelo ke ztrátám oznámení.</string>
+    <string name="remove">ODSTRANIT</string>
+    <string name="grant">UDĚLIT</string>
+    <string name="no_storage_permission">AmazMod nemá oprávnění k přístupu k úložišti, prosím udělte aplikaci toto oprávnění.</string>
+    <string name="activity_about_recruiter">Zapojte se</string>
 </resources>

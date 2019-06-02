@@ -199,12 +199,24 @@ public class MainService extends Service implements Transporter.DataListener {
 
         batteryFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
 
-        // Remove apk_install Wakelock if active
+        // Check if is SuperUser
+        File su = new File("/system/xbin/su");
+        Logger.debug("install is check if SuperUser");
+        if(su.exists()){
+        // Is SuperUser
         Logger.debug("Disabling APK_INSTALL WAKELOCK");
         try{
             Runtime.getRuntime().exec("adb shell echo APK_INSTALL > /sys/power/wake_unlock");
         } catch (IOException e) {
             Logger.error(e,"onCreate: IOException while disabling APK_INSTALL WAKELOCK");
+        }}
+        else
+        // Is Stock user
+        Logger.debug("Restore APK_INSTALL screen timeout");
+        try{
+            Runtime.getRuntime().exec("adb shell settings put system screen_off_timeout 14000");
+        } catch (IOException e) {
+            Logger.error(e,"onCreate: IOException while restoring APK_INSTALL screen timeout");
         }
 
         // Register power disconnect receiver
@@ -895,7 +907,10 @@ public class MainService extends Service implements Transporter.DataListener {
                             final File apk = new File(apkFile);
 
                             if (apk.exists()) {
-
+                                if (apkFile.contains ("service-")) {
+                                    showConfirmationWearActivity("Service update", "0");
+                                }
+                                else
                                 showConfirmationWearActivity("Installing APK", "0");
                                 DeviceUtil.installApkAdb(context, apk, requestShellCommandData.isReboot());
 
@@ -904,7 +919,7 @@ public class MainService extends Service implements Transporter.DataListener {
                                 errorMsg = String.format("%s not found!", apkFile);
                             }
 
-                        } else if (command.contains("install_amazmod_update ")) {
+                        } else if (command.contains("install_amazmod_update ")){
                             showConfirmationWearActivity("Service update", "0");
                             DeviceUtil.installPackage(context, getPackageName(), command.replace("install_amazmod_update ", ""));
 

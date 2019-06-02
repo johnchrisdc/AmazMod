@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
+import android.support.text.emoji.widget.EmojiTextView;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.wearable.view.WearableListView;
@@ -55,8 +56,8 @@ public class NotificationListAdapter extends WearableListView.Adapter {
     private static class ItemViewHolder extends WearableListView.ViewHolder {
         ImageView notificationIcon;
         ImageView notificationIconBadge;
-        TextView notificationTitle;
-        TextView notificationContentPreview;
+        EmojiTextView notificationTitle;
+        EmojiTextView notificationContentPreview;
         TextView notificationTime;
 
         ItemViewHolder(View itemView) {
